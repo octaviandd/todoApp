@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/1e10f2d5f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>ToDoList App</title>
 </head>
 <body>
@@ -28,17 +29,17 @@
 
 
         <div class="projects-modal" >
-            <h3>Create New Project</h3>
+            <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px;">Create New Project</h3>
             <form id="project">
                 <label for="project-name"><label>
-                <input type="text" name="" id="project-name" placeholder="Title" ><br>
-                <input type="date" name="date" id="project-date"><br>
-                <label>Priority(low,medium,high)</label><br>
+                <input type="text" name="" id="project-name" placeholder="Title" required><br>
+                <input type="date" name="date" id="project-date" required><br>
+                <label id="priority-tag">Priority:</label><br>
                 <select name="" id="project-priority">
-                    <option value="white">1</option>
-                    <option value="yellow">2</option>
-                    <option value="red">3</option>
-                </select>
+                    <option value="#00C851">1 (Low)</option>
+                    <option value="#ffbb33">2 (Medium)</option>
+                    <option value="#ff4444">3 (High)</option>
+                </select><br>
                 <input type="submit" name="submit" class="new-project-submit" value="Create Project">
                 <button id='close'>Cancel</button>
             </form>  
@@ -49,7 +50,6 @@
             
         <div class="todos-modal">
             <div class="title-head">
-                    <h2>Tasks</h2>
                     <button id="close">X</button>
             </div>
             
