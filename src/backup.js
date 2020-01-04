@@ -16,6 +16,18 @@ const Newtodo = (title, date, priority) => {
     };
   };
 
+function deleteProject(){
+    let allRemoveButtons = document.querySelectorAll('.delete-button');
+    allRemoveButtons.forEach(function(el){
+        el.addEventListener('click', function(e){
+            e.preventDefault();
+            console.log(el.dataset.name);
+            projectStorage.splice(el.dataset.name, 1);
+            localStorage.setItem("items", JSON.stringify(projectStorage));
+            location.reload();
+        })
+    })
+}
 
 function populateProjects(){
     let newDiv = document.createElement("div");
@@ -31,18 +43,29 @@ function populateProjects(){
     let newSpan = document.createElement('span');
     newSpan.innerHTML = projectStorage[projectStorage.length -1].date
 
+    let deleteButton = document.createElement('button')
+    deleteButton.classList = 'delete-button'
+    deleteButton.innerHTML = 'X'
+    deleteButton.dataset.name = projectStorage[projectStorage.length - 1].dataset;
+    
+    
 
     document.querySelector('.projects-list').appendChild(newDiv)
     document.querySelector('.projects-list').appendChild(newButton)
     document.querySelector('.projects-list').appendChild(newSpan)
+    document.querySelector('.projects-list').appendChild(deleteButton)
     
-    // deleteProject();
+    deleteProject();
 }
+
+
+
 
 document.querySelector('#add-project-button').addEventListener('click', function(){
     document.querySelector(".projects-modal").style.display = "inline";
     document.querySelector(".page-mask").style.display = "inline";
 })
+
 
 let close = document.querySelectorAll('#close');
 close.forEach(function(e){
@@ -137,6 +160,10 @@ window.onload = function(){
         button.dataset.name = projectStorage[i].dataset;
         button.style.background = projectStorage[i].priority;
         
+        let deleteButton = document.createElement('button')
+        deleteButton.innerHTML = 'X'
+        deleteButton.classList = "delete-button"
+        deleteButton.dataset.name = projectStorage[i].dataset;
         span = document.createElement("span");
         span.innerHTML = projectStorage[i].date;
         span.style.float = "right";
@@ -144,12 +171,17 @@ window.onload = function(){
         document.querySelector('.projects-list').appendChild(newDiv)
         document.querySelector('.projects-list').appendChild(button)
         document.querySelector('.projects-list').appendChild(span)
+        document.querySelector('.projects-list').appendChild(deleteButton)
         
         projectCounter++;
         
         
+        
         todoList();
+        deleteProject();
     }
+    
+    
 }
 
 
@@ -239,5 +271,21 @@ function populateTodo(currentProject){
         }
         
 
+    })
+
+    checkBox();
+}
+
+function checkBox() {
+    let allCheckBoxes = document.querySelectorAll('.checkbox');
+    allCheckBoxes.forEach(function(el){
+        el.addEventListener('click', function(e){
+            
+            e.target.nextElementSibling.style.textDecoration = "line-through"
+            e.target.check = e.target.check
+            localStorage.setItem("todo" , JSON.stringify(toDoStorage))
+            
+            
+        })
     })
 }
