@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/1e10f2d5f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDoList App</title>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-logo"><i class="fas fa-clipboard-list"></i></div>
+        <div class="top-bar-title">ToDo App</div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="projects">
+            <h3>Projects</h3>
+            <button id='add-project-button'><i class="fas fa-plus-circle"></i></button>
+            <div class="projects-list"></div>
+        </div>
+
+
+
+        <div class="projects-modal" >
+            <h3>Create New Project</h3>
+            <form id="project">
+                <label for="project-name"><label>
+                <input type="text" name="" id="project-name" placeholder="Title" ><br>
+                <input type="date" name="date" id="project-date"><br>
+                <label>Priority(low,medium,high)</label><br>
+                <select name="" id="project-priority">
+                    <option value="white">1</option>
+                    <option value="yellow">2</option>
+                    <option value="red">3</option>
+                </select>
+                <input type="submit" name="submit" class="new-project-submit" value="Create Project">
+                <button id='close'>Cancel</button>
+            </form>  
+        </div>
+        
+         <div class="page-mask"></div>   
+            
+            
+        <div class="todos-modal">
+            <div class="title-head">
+                    <h2>Tasks</h2>
+                    <button id="close">X</button>
+            </div>
+            
+            <div class="modal-2-header"></div>
+            <form class="todo-form">
+              <input type="text" name="todo" style="margin-bottom: 10px;" placeholder="Max 20 characters" maxlength="20" required class="task-input">
+              <input class="todo-submit-button" type="submit" name="submit" value="Add task">
+            </form>
+            <div class="todo-list"></div>
+        </div>
+    
+    </div>
+
+
+    
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
