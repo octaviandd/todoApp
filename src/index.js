@@ -361,15 +361,10 @@ function trashButton (){
     trash.forEach(function(e){
         e.addEventListener('click', function(){
             toDoStorage.forEach(function(element){
-                if (element.content == e.dataset.name){
-                    let del = document.querySelectorAll('div')
-                    del.forEach(function(parameter){
-                        if (parameter.dataset.name == element.content){
-                            parameter.remove();
-                            toDoStorage.splice(toDoStorage.indexOf(element), 1);
-                            localStorage.setItem("todo", JSON.stringify(toDoStorage));
-                        }
-                    })
+                if (element.content == e.dataset.name){ 
+                    e.parentElement.remove()
+                    toDoStorage.splice(toDoStorage.indexOf(element), 1)
+                    localStorage.setItem("todo", JSON.stringify(toDoStorage))
                 }
             })
         })
