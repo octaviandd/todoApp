@@ -270,13 +270,16 @@ form.addEventListener('submit', function(e){
                 console.log(currentProject);
                 
                 populateTodo(currentProject)
+                clearToDoField();
  
             }
 })
 
 
 
-
+function clearToDoField () {
+     taskValue = document.querySelector('.task-input').value = ''
+}
 
 
 
@@ -372,4 +375,3 @@ function trashButton (){
         })
     })
 }
-
