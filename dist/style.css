@@ -37,7 +37,10 @@ body{
     flex-direction: column;
     border: 1px solid #A69F98;
     padding: 5px 5px 5px 5px;
+<<<<<<< HEAD
     word-wrap: break-word; 
+=======
+>>>>>>> 2dc636e8615d563a1000eb5f40a7523bb961425c
 }
 
 .projects h3{
@@ -73,7 +76,10 @@ body{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> 2dc636e8615d563a1000eb5f40a7523bb961425c
 }
 
 .eachproject{
@@ -82,7 +88,10 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2dc636e8615d563a1000eb5f40a7523bb961425c
 }
 
 .eachproject button{
@@ -109,7 +118,10 @@ body{
 #project *{
     padding-top: 5px;
     padding-bottom: 5px;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2dc636e8615d563a1000eb5f40a7523bb961425c
 }
 
 #project input{

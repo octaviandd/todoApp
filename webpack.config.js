@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/backup.js',
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -21,5 +21,9 @@ module.exports = {
       }
     ],
   }
+<<<<<<< HEAD
   
 };
+=======
+};
+>>>>>>> 2dc636e8615d563a1000eb5f40a7523bb961425c
