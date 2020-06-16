@@ -1,6 +1,1 @@
-# todoApp
-
-GIFS();
-
-![](todoApp1.gif)
-![](todoApp2.gif)
+Let's rebuild this, properly now.
