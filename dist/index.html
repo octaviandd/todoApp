@@ -1,75 +1,13 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/1e10f2d5f9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>ToDoList App</title>
-</head>
-<body>
+<!-- @format -->
 
-    <div class="top-bar">
-        <div class="top-bar-logo"><i class="fas fa-clipboard-list"></i></div>
-        <div class="top-bar-title">ToDo App</div>
-    </div>
-
-
-
-    <div class="container">
-
-        <div class="projects">
-            <h3>Projects</h3>
-            <button id='add-project-button'><i class="fas fa-plus-circle"></i></button>
-            <div class="projects-list"></div>
-        </div>
-
-
-
-        <div class="projects-modal" >
-            <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px;">Create New Project</h3>
-            <form id="project">
-                <label for="project-name"><label>
-                <input type="text" name="" id="project-name" placeholder="Title" required><br>
-                <input type="date" name="date" id="project-date" required><br>
-                <label id="priority-tag">Priority:</label><br>
-                <select name="" id="project-priority">
-                    <option value="#00C851">1 (Low)</option>
-                    <option value="#ffbb33">2 (Medium)</option>
-                    <option value="#ff4444">3 (High)</option>
-                </select><br>
-                <input type="submit" name="submit" class="new-project-submit" value="Create Project">
-                <button id='close'>Cancel</button>
-            </form>  
-        </div>
-        
-         <div class="page-mask"></div>   
-            
-            
-        <div class="todos-modal">
-            <div class="title-head">
-                    <button id="close">X</button>
-            </div>
-            
-            <div class="modal-2-header"></div>
-            <form class="todo-form">
-              <input type="text" name="todo" style="margin-bottom: 10px;" placeholder="Max 20 characters" maxlength="20" required class="task-input">
-              <input class=" todo-submit-button" type="submit" name="submit" value="Add Task">
-            </form>
-            <div class="todo-list"></div>
-        </div>
-    
-    </div>
-
-
-    
-
-
-
-
-
-    <script src="main.js"></script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <script src="bundle.js"></script>
+  </body>
 </html>
