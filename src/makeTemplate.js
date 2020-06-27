@@ -70,7 +70,7 @@ const makeTemplate = () => {
 
   mainContainer.appendChild(header);
   mainContainer.appendChild(todoContainer);
-  mainContainer.appendChild(footer);
+  mainContainer.appendChild(footer)
 
   mainContainer.setAttribute("id", "main-container");
   todoContainer.setAttribute("id", "todos-container");
